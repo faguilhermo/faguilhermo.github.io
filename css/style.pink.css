@@ -2998,3 +2998,8 @@ li {
 .text-tech {
   padding-bottom: 20px;
 }
+
+.logo-portfolio {
+  height: 150px;
+  margin-top: 3rem;
+}
