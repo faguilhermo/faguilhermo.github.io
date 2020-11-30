@@ -2994,3 +2994,7 @@ code {
 li {
   counter-increment: li
 }
+
+.text-tech {
+  padding-bottom: 20px;
+}
