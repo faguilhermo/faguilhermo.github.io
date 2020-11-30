@@ -2973,3 +2973,24 @@ code {
 .dropdown-item.disabled, .dropdown-item:disabled {
   color: #6c757d;
 }
+
+.text-portfolio {
+  margin-top: 3rem;
+}
+
+.ol-portfolio {
+  list-style: none; 
+  counter-reset: li
+}
+
+.li-portfolio::before {
+  content: counter(li); 
+  color: #ef5285;
+  display: inline-block; 
+  width: 1em;
+  margin-left: -1.5em;
+}
+
+li {
+  counter-increment: li
+}
