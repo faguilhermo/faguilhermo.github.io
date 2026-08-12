@@ -49,7 +49,13 @@ a { color: inherit; text-decoration: none; }
 }
 
 .brand { display: inline-flex; align-items: center; gap: 0.65rem; font-weight: 650; letter-spacing: -0.02em; }
-.app-icon { display: block; width: 2rem; height: 2rem; border-radius: 0.45rem; }
+.app-icon {
+  display: block;
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 22.5%;
+  object-fit: cover;
+}
 nav { display: flex; gap: 1.25rem; color: var(--muted); font-size: 0.9rem; }
 nav a { padding-block: 0.35rem; }
 nav a:hover, nav a.active { color: var(--text); }
