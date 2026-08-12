@@ -88,17 +88,19 @@ h2 { font-size: 1.2rem; line-height: 1.25; letter-spacing: -0.025em; }
 
 footer { display: flex; justify-content: space-between; padding: 1.8rem 0 2.5rem; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.82rem; }
 footer a { color: var(--text); }
+.footer-links { display: flex; gap: 1.25rem; }
 
 @media (max-width: 44rem) {
-  .site-header { min-height: 4.75rem; }
+  .site-header { align-items: flex-start; flex-direction: column; gap: 0.75rem; padding-block: 1rem; }
   .content-grid { grid-template-columns: 1fr; padding-bottom: 4rem; }
   .card { min-height: auto; }
   .card h2 { margin-top: 0; }
   .help-note { padding-bottom: 5rem; }
+  footer { align-items: flex-start; flex-direction: column; gap: 0.75rem; }
 }
 
 @media (max-width: 28rem) {
   .site-header, main, footer { width: min(calc(100% - 2rem), var(--max-width)); }
-  nav { gap: 0.8rem; font-size: 0.8rem; }
+  nav, .footer-links { gap: 0.8rem; font-size: 0.8rem; }
   .brand { font-size: 0.9rem; }
 }
