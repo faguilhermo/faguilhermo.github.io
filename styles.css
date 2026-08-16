@@ -77,6 +77,36 @@ h2 { font-size: 1.2rem; line-height: 1.25; letter-spacing: -0.025em; }
 .help-note { max-width: 35rem; padding-bottom: 7rem; }
 .help-note h2 { margin-bottom: 0.65rem; font-size: clamp(1.8rem, 4vw, 2.5rem); }
 
+.apps-hub { min-height: calc(100vh - 7rem); }
+.hub-hero { max-width: 43rem; padding: clamp(5rem, 13vw, 8.5rem) 0 clamp(3rem, 7vw, 4.5rem); }
+.app-directory { display: grid; gap: 1rem; padding-bottom: 6rem; }
+.app-directory-card { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; padding: 1.5rem; border: 1px solid var(--line); border-radius: 1.5rem; background: var(--surface); transition: border-color 160ms ease, transform 160ms ease; }
+.app-directory-card:hover { border-color: var(--accent); transform: translateY(-0.2rem); }
+.bible-card { background: var(--surface-soft); }
+.metuner-directory-card { color: #000000; background: #ffffff; }
+.directory-icon { display: block; width: 4.5rem; height: 4.5rem; border-radius: 30%; object-fit: cover; }
+.app-directory-copy { display: grid; gap: 0.2rem; }
+.app-directory-name { font-size: 1.25rem; font-weight: 700; letter-spacing: -0.03em; }
+.app-directory-description { color: var(--muted); }
+.metuner-directory-card .app-directory-description { color: #555555; }
+.directory-arrow { font-size: 1.5rem; }
+
+.metuner-site { --background: #ffffff; --surface: #ffffff; --text: #000000; --muted: #6a6a6a; --line: #dddddd; --accent: #000000; background: var(--background); }
+.metuner-hero { max-width: 47rem; }
+.metuner-features { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.metuner-feature { min-height: 18rem; padding: 2rem 1.5rem; border-right: 1px solid var(--line); }
+.metuner-feature:last-child { border-right: 0; }
+.feature-label { margin-bottom: 4rem; color: var(--muted); font-size: 0.78rem; font-variant-numeric: tabular-nums; }
+.metuner-feature p:not(.feature-label) { color: var(--muted); }
+.metuner-statement { max-width: 42rem; padding: 6rem 0; }
+.metuner-statement h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+
+@media (prefers-color-scheme: dark) {
+  .metuner-site { --background: #000000; --surface: #111111; --text: #ffffff; --muted: #aaaaaa; --line: #303030; --accent: #ffffff; }
+  .metuner-directory-card { color: #ffffff; background: #111111; border-color: #303030; }
+  .metuner-directory-card .app-directory-description { color: #aaaaaa; }
+}
+
 .legal-page { max-width: 47rem; }
 .legal-intro { padding: clamp(5rem, 13vw, 8.5rem) 0 4rem; border-bottom: 1px solid var(--line); }
 .legal-intro h1 { font-size: clamp(2.8rem, 7vw, 4.7rem); }
@@ -93,6 +123,10 @@ footer a { color: var(--text); }
 @media (max-width: 44rem) {
   .site-header { align-items: flex-start; flex-direction: column; gap: 0.75rem; padding-block: 1rem; }
   .content-grid { grid-template-columns: 1fr; padding-bottom: 4rem; }
+  .metuner-features { grid-template-columns: 1fr; }
+  .metuner-feature { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .metuner-feature:last-child { border-bottom: 0; }
+  .feature-label { margin-bottom: 2rem; }
   .card { min-height: auto; }
   .card h2 { margin-top: 0; }
   .help-note { padding-bottom: 5rem; }
@@ -103,4 +137,7 @@ footer a { color: var(--text); }
   .site-header, main, footer { width: min(calc(100% - 2rem), var(--max-width)); }
   nav, .footer-links { gap: 0.8rem; font-size: 0.8rem; }
   .brand { font-size: 0.9rem; }
+  .app-directory-card { grid-template-columns: auto 1fr; gap: 1rem; }
+  .directory-arrow { display: none; }
+  .directory-icon { width: 3.5rem; height: 3.5rem; }
 }
